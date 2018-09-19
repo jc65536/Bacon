@@ -24,16 +24,16 @@ body, html {
     width: 40%;
     box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
 }
-input {
+input, button {
     height: 20px;
     background: none;
     border: none;
 }
-input:focus {
+input, button:focus {
     outline: none;
 }
 
-#menu {
+#menuButton {
     height: 40px;
     width: 40px;
     border-radius: 20px;
@@ -42,7 +42,7 @@ input:focus {
     background-position: center center;
 }
 
-#menu:hover {
+#menuButton:hover {
     animation: fill 0.1s linear forwards;
 }
 
