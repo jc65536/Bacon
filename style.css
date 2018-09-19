@@ -13,7 +13,8 @@ body, html {
 }
 
 #contentPane {
-    padding: 30px;
+    padding: 20px;
+    padding-bottom: 30px;
     background: #2962FF;
     box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.3);
 }
