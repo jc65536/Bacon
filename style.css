@@ -1,5 +1,28 @@
-td {
-    padding: 5px;
+body, html {
+    padding: 0;
+    margin: 0;
+}
+* {
+    font-family: Roboto;
+}
+
+#title {
+    color: white;
+    font-weight: normal;
+    user-select: none;
+}
+
+#contentPane {
+    border: 1px solid black;
+    padding: 50px;
+    background: #2962FF;
+}
+#inputPane {
+    background: white;
+    border-radius: 50px;
+    padding: 2px;
+    width: 40%;
+    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
 }
 input {
     height: 20px;
@@ -9,30 +32,42 @@ input {
 input:focus {
     outline: none;
 }
-#input {
+#searchBox {
     font-size: 16px;
     height: 20px;
     padding: 10px;
-	border-radius: 20px;
-	border: 1px solid #2962FF;
-}
-#input:focus {
-    animation: lift 0.1s linear forwards;
+    width: 100%;
+    box-sizing: border-box;
 }
 #search {
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    border: 1px solid #2962FF;
     background-image: url("baseline-search-24px.svg");
     background-repeat: no-repeat;
     background-position: center center;
+    float: right;
 }
+
 #search:hover {
-    animation: lift 0.1s linear forwards;    
+    animation: fill 0.1s linear forwards;
 }
-@keyframes lift {
+
+@keyframes fill {
+    from {
+        background-color: none;
+    }
     to {
-        box-shadow: 0px 2px 5px grey;
+        background-color: rgba(50, 50, 50, 0.3);
+    }
+}
+
+.floating {
+    animation: float 0.1s linear forwards;
+}
+
+@keyframes float {
+    to {
+        box-shadow: 0px 7px 12px rgba(50, 50, 50, 0.3);
     }
 }
