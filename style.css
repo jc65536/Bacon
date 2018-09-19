@@ -13,9 +13,9 @@ body, html {
 }
 
 #contentPane {
-    border: 1px solid black;
-    padding: 50px;
+    padding: 30px;
     background: #2962FF;
+    box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.3);
 }
 #inputPane {
     background: white;
@@ -32,6 +32,20 @@ input {
 input:focus {
     outline: none;
 }
+
+#menu {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-image: url("baseline-menu-24px.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#menu:hover {
+    animation: fill 0.1s linear forwards;
+}
+
 #searchBox {
     font-size: 16px;
     height: 20px;
