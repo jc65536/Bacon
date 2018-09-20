@@ -8,6 +8,11 @@
     src: url("Roboto-Regular.ttf");
 }
 
+a {
+    text-decoration: none;
+    color: default;
+}
+
 * {
     font-family: Roboto;
 }
@@ -42,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 .menuItems {
     padding: 10px 30px;
     cursor: pointer;
+    overflow-wrap: none;
 }
 
 .iconCells {
@@ -52,27 +58,27 @@ h1, h2, h3, h4, h5, h6 {
     animation: expand 0.15s ease-out forwards;
 }
 
-@keyframes expand {
+/*@keyframes expand {
     from {
         width: 0;
     }
     to {
-        width: 15%;
+        width: 30%;
     }
-}
+}*/
 
 .shrinking {
     animation: shrink 0.15s ease-out forwards;
 }
 
-@keyframes shrink {
+/*@keyframes shrink {
     from {
         width: 15%;
     }
     to {
         width: 0;
     }
-}
+}*/
 
 #headerPanel {
     padding: 20px;
@@ -80,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #2962FF;    
 }
 
-#menuButton, #fakeMenuButton {
+#openMenuButton, #closeMenuButton {
     background-image: url("baseline-menu-24px.svg");
 }
 
@@ -127,7 +133,7 @@ input, button:focus {
     box-sizing: border-box;
 }
 
-.buttons {
+button {
     cursor: pointer;
     height: 40px;
     width: 40px;

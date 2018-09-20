@@ -1,3 +1,28 @@
+var menuWidth = Math.max(200, document.body.clientWidth * 0.2);
+var menuExpansion = document.createElement("style");
+menuExpansion.type = "text/css";
+var keyFrames = "\
+@keyframes expand {\
+    from {\
+        width: 0;\
+    }\
+    to {\
+        width: " + menuWidth + ";\
+    }\
+}\
+@keyframes shrink {\
+    from {\
+        width: " + menuWidth + ";\
+    }\
+    to {\
+        width: 0;\
+    }\
+}\
+"
+menuExpansion.innerHTML = keyFrames;
+document.getElementsByTagName('head')[0].appendChild(menuExpansion);
+console.log(menuWidth);
+
 function id(id) {
     return document.getElementById(id);
 }
@@ -12,7 +37,7 @@ id("searchBox").onblur = function() {
     id("searchBar").classList.add("resting");
 }
 
-var buttons = document.getElementsByClassName("buttons");
+var buttons = document.getElementsByTagName("button");
 for (var a = 0; a < buttons.length; a++) {
     buttons[a].onmouseenter = function() {
         this.classList.remove("unfilling");
@@ -36,13 +61,13 @@ for (var a = 0; a < menuItems.length; a++) {
     }
 }
 
-id("menuButton").onfocus = function() {
+id("openMenuButton").onclick = function() {
     id("menuPanel").classList.remove("shrinking");
     id("menuPanel").classList.add("expanding");
     id("menuPanelContents").style.display = "block";
 }
 
-id("menuButton").onblur = function() {
+id("closeMenuButton").onclick = function() {
     id("menuPanel").classList.remove("expanding");
     id("menuPanel").classList.add("shrinking");
     id("menuPanelContents").style.display = "none";
