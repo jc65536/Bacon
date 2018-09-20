@@ -35,18 +35,17 @@ h1, h2, h3, h4, h5, h6 {
 
 #menuList {
     list-style: none;
-    border: 1px solid #2962FF;
     padding: 0;
     margin: 0;
 }
 
-li {
-    border: 1px solid #2962FF;
-    padding: 10px;
+.menuItems {
+    padding: 10px 30px;
+    cursor: pointer;
 }
 
-td {
-    border: 1px solid #2962FF;
+.iconCells {
+    padding: 5px;
 }
 
 .expanding {
@@ -58,7 +57,7 @@ td {
         width: 0;
     }
     to {
-        width: 20%;
+        width: 15%;
     }
 }
 
@@ -68,7 +67,7 @@ td {
 
 @keyframes shrink {
     from {
-        width: 20%;
+        width: 15%;
     }
     to {
         width: 0;

@@ -24,6 +24,18 @@ for (var a = 0; a < buttons.length; a++) {
     }
 }
 
+var menuItems = document.getElementsByClassName("menuItems");
+for (var a = 0; a < menuItems.length; a++) {
+    menuItems[a].onmouseenter = function() {
+        this.classList.remove("unfilling");
+        this.classList.add("filling");
+    }
+    menuItems[a].onmouseleave = function() {
+        this.classList.remove("filling");
+        this.classList.add("unfilling");
+    }
+}
+
 id("menuButton").onfocus = function() {
     id("menuPanel").classList.remove("shrinking");
     id("menuPanel").classList.add("expanding");
