@@ -23,3 +23,8 @@ for (var a = 0; a < buttons.length; a++) {
         this.classList.add("unfilling");
     }
 }
+
+id("menuButton").onclick = function() {
+    this.classList.remove("unfilling");
+    this.classList.add("filling");
+}
