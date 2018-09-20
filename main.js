@@ -1,3 +1,4 @@
+/*
 var menuWidth = Math.max(200, document.body.clientWidth * 0.2);
 var menuExpansion = document.createElement("style");
 menuExpansion.type = "text/css";
@@ -7,12 +8,12 @@ var keyFrames = "\
         width: 0;\
     }\
     to {\
-        width: " + menuWidth + ";\
+        width: " + menuWidth + "px;\
     }\
 }\
 @keyframes shrink {\
     from {\
-        width: " + menuWidth + ";\
+        width: " + menuWidth + "px;\
     }\
     to {\
         width: 0;\
@@ -22,10 +23,13 @@ var keyFrames = "\
 menuExpansion.innerHTML = keyFrames;
 document.getElementsByTagName('head')[0].appendChild(menuExpansion);
 console.log(menuWidth);
+*/
 
 function id(id) {
     return document.getElementById(id);
 }
+
+id("pageTitle").innerHTML = document.getElementsByTagName("title")[0].innerHTML;
 
 id("searchBox").onfocus = function() {
     id("searchBar").classList.remove("resting");

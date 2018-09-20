@@ -10,7 +10,7 @@
 
 a {
     text-decoration: none;
-    color: default;
+    color: black;
 }
 
 * {
@@ -24,6 +24,7 @@ body, html {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: ProductSans;
+    user-select: none;
 }
 
 .panels {
@@ -36,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 0;
     background-color: white;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 #menuList {
@@ -45,45 +47,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menuItems {
-    padding: 10px 30px;
+    padding: 0px 20px;
     cursor: pointer;
     overflow-wrap: none;
 }
 
 .iconCells {
-    padding: 5px;
+    padding: 10px;
 }
 
 .expanding {
     animation: expand 0.15s ease-out forwards;
 }
 
-/*@keyframes expand {
+@keyframes expand {
     from {
         width: 0;
     }
     to {
-        width: 30%;
+        width: 300px;
     }
-}*/
+}
 
 .shrinking {
     animation: shrink 0.15s ease-out forwards;
 }
 
-/*@keyframes shrink {
+@keyframes shrink {
     from {
-        width: 15%;
+        width: 300px;
     }
     to {
         width: 0;
     }
-}*/
+}
 
 #headerPanel {
-    padding: 20px;
     padding-bottom: 30px;
-    background: #2962FF;    
+    background: #2979FF;    
 }
 
 #openMenuButton, #closeMenuButton {
@@ -92,12 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #menuPanelContents {
     display: none;
-}
-
-#title {
-    color: white;
-    font-weight: normal;
-    user-select: none;
 }
 
 #searchBar {
