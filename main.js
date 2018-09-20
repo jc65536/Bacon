@@ -24,7 +24,14 @@ for (var a = 0; a < buttons.length; a++) {
     }
 }
 
-id("menuButton").onclick = function() {
-    this.classList.remove("unfilling");
-    this.classList.add("filling");
+id("menuButton").onfocus = function() {
+    id("menuPanel").classList.remove("shrinking");
+    id("menuPanel").classList.add("expanding");
+    id("menuPanelContents").style.display = "block";
+}
+
+id("menuButton").onblur = function() {
+    id("menuPanel").classList.remove("expanding");
+    id("menuPanel").classList.add("shrinking");
+    id("menuPanelContents").style.display = "none";
 }
