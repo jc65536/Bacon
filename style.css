@@ -27,8 +27,12 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
 }
 
+#headerTitle, #pageTitle {
+    color: white;
+}
+
 .panels {
-    box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.3);
+    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
 }
 
 #menuPanel {
@@ -38,6 +42,14 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
     overflow: hidden;
     white-space: nowrap;
+    box-shadow: 5px 0px 10px rgba(50, 50, 50, 0.3);
+}
+
+#shade {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
 }
 
 #menuList {
@@ -84,11 +96,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #headerPanel {
     padding-bottom: 30px;
-    background: #2979FF;    
+    background: #2979FF;
+    box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.3);
 }
 
-#openMenuButton, #closeMenuButton {
-    background-image: url("baseline-menu-24px.svg");
+#openMenuButton {
+    background-image: url("baseline-menu-24px_white.svg");
+}
+
+#closeMenuButton {
+    background-image: url("baseline-menu-24px_black.svg");
 }
 
 #menuPanelContents {

@@ -69,10 +69,19 @@ id("openMenuButton").onclick = function() {
     id("menuPanel").classList.remove("shrinking");
     id("menuPanel").classList.add("expanding");
     id("menuPanelContents").style.display = "block";
+    id("shade").style.display="block";
+    id("shade").classList.remove("unfilling");
+    id("shade").classList.add("filling");
 }
 
-id("closeMenuButton").onclick = function() {
+function hideMenu() {
     id("menuPanel").classList.remove("expanding");
     id("menuPanel").classList.add("shrinking");
     id("menuPanelContents").style.display = "none";
+    id("shade").classList.remove("filling");
+    id("shade").classList.add("unfilling");
+    id("shade").style.display="none";
 }
+
+id("closeMenuButton").onclick = hideMenu;
+id("shade").onclick = hideMenu;
