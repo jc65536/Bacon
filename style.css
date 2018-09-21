@@ -95,8 +95,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-#headerPanel {
+#navBar {width: 100%;}
+
+#headerContent {
     padding-bottom: 30px;
+    margin: 0;
+}
+
+#headerPanel {
     background: #2979FF;
     box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.3);
 }

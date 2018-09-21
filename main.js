@@ -31,18 +31,6 @@ function id(id) {
 
 id("pageTitle").innerHTML = document.getElementsByTagName("title")[0].innerHTML;
 
-id("searchBox").onfocus = function() {
-    id("searchBar").classList.remove("resting");
-    id("searchBar").classList.add("floating");
-    id("searchButton").style.backgroundImage = "url('baseline-search-24px_blue.svg')";
-}
-
-id("searchBox").onblur = function() {
-    id("searchBar").classList.remove("floating");
-    id("searchBar").classList.add("resting");
-    id("searchButton").style.backgroundImage = "url('baseline-search-24px_black.svg')";
-}
-
 var buttons = document.getElementsByTagName("button");
 for (var a = 0; a < buttons.length; a++) {
     buttons[a].onmouseenter = function() {
