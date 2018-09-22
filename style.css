@@ -20,6 +20,8 @@ a {
 body, html {
     padding: 0;
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,12 +33,10 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-.panels {
-    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
-}
-
 #menuPanel {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 0;
     background-color: white;
@@ -47,6 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #shade {
     position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     background: rgba(50, 50, 50, 0.6);
@@ -95,11 +97,38 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-#navBar {width: 100%;}
+#navBar {
+    width: 100%;
+}
 
 #headerContent {
     padding-bottom: 30px;
     margin: 0;
+    text-align: center;
+}
+
+::placeholder {
+    color: lightgrey;
+}
+
+#splashPanel {
+    height: 100%;
+    width: 100%;
+    background: #2979FF;
+    overflow: hidden;
+}
+
+#splashGrid {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#splashContent {
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
 }
 
 #headerPanel {
@@ -125,6 +154,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px;
     width: 35%;
     box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
+    margin: auto;
 }
 
 input, button {
@@ -142,6 +172,7 @@ input, button:focus {
     padding: 30px;
     border-radius: 30px;
     width: 80%;
+    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
 }
 
 #searchBox {

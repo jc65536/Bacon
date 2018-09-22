@@ -22,7 +22,7 @@
 				</tr>
 			</table>
 			<ul id="menuList">
-				<a href="home.html">
+				<a href="splash.html">
 					<li class="menuItems">
 						<table>
 							<tr>
@@ -87,27 +87,26 @@
 			</table>
 		</div>
 		<div id="headerContent">
-			<center>
 				<h1 id="headerTitle">Kevin Bacon Number Searcher</h1>
-				<form id="form">
+				<form id="form" method="get">
 					<table id="searchBar">
 						<tr>
 							<td style="width: 100%">
-								<input id="searchBox" autocomplete="off" />
+								<input name="actor" id="searchBox" placeholder="Type the name of an actor or actress" autocomplete="off" />
 							</td>
 							<td>
-								<button id="searchButton" class="buttons"></button>
+								<button id="searchButton"></button>
 							</td>
 						</tr>
 					</table>
 				</form>
-			</center>
 		</div>
 	</div>
-	<div id="outputPanel" class="panels">filler</div>
+	<div id="outputPanel">
+		<h2><?php $actor = htmlspecialchars($_GET["actor"]); echo  $actor; ?></h2>
+	</div>
 	<script src="main.js"></script>
-	<script src="home.js"></script>
-	<script src="serverRequest.js"></script>
+	<script src="searchBar.js"></script>
 </body>
 
 
