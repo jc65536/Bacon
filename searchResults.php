@@ -8,6 +8,38 @@
 </head>
 
 <body>
+<div id="headerPanel">
+		<div id="navBar">
+			<table>
+				<tr>
+					<td style="padding: 20px">
+						<button id="openMenuButton" class="buttons"></button>
+					</td>
+					<td>
+						<h2 id="pageTitle">Title</h2>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="headerContent">
+				<h1 id="headerTitle">Kevin Bacon Number Searcher</h1>
+				<form id="form" method="get">
+					<table id="searchBar">
+						<tr>
+							<td style="width: 100%">
+								<input name="actor" id="searchBox" placeholder="Type the name of an actor or actress" autocomplete="off" />
+							</td>
+							<td>
+								<button id="searchButton"></button>
+							</td>
+						</tr>
+					</table>
+				</form>
+		</div>
+	</div>
+	<div id="contentPanel">
+		<h2><?php $actor = htmlspecialchars($_GET["actor"]); echo  $actor; ?></h2>
+	</div>
 	<div id="shade"></div>
 	<div id="menuPanel">
 		<div id="menuPanelContents">
@@ -72,38 +104,6 @@
 				</a>
 			</ul>
 		</div>
-	</div>
-	<div id="headerPanel">
-		<div id="navBar">
-			<table>
-				<tr>
-					<td style="padding: 20px">
-						<button id="openMenuButton" class="buttons"></button>
-					</td>
-					<td>
-						<h2 id="pageTitle">Title</h2>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div id="headerContent">
-				<h1 id="headerTitle">Kevin Bacon Number Searcher</h1>
-				<form id="form" method="get">
-					<table id="searchBar">
-						<tr>
-							<td style="width: 100%">
-								<input name="actor" id="searchBox" placeholder="Type the name of an actor or actress" autocomplete="off" />
-							</td>
-							<td>
-								<button id="searchButton"></button>
-							</td>
-						</tr>
-					</table>
-				</form>
-		</div>
-	</div>
-	<div id="outputPanel">
-		<h2><?php $actor = htmlspecialchars($_GET["actor"]); echo  $actor; ?></h2>
 	</div>
 	<script src="main.js"></script>
 	<script src="searchBar.js"></script>

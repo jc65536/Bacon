@@ -134,7 +134,14 @@ h1, h2, h3, h4, h5, h6 {
 #headerPanel {
     background: #2979FF;
     box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.3);
+    width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#headerFilling {
+    display: flex;
 }
 
 #openMenuButton {
@@ -167,9 +174,8 @@ input, button:focus {
     outline: none;
 }
 
-#outputPanel {
+#contentPanel {
     margin: auto;
-    margin-top: 30px;
     padding: 30px;
     border-radius: 30px;
     width: 80%;

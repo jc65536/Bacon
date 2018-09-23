@@ -29,6 +29,8 @@ function id(id) {
     return document.getElementById(id);
 }
 
+id("contentPanel").style.marginTop = id("headerPanel").clientHeight + 30 + "px";
+
 id("pageTitle").innerHTML = document.getElementsByTagName("title")[0].innerHTML;
 
 var buttons = document.getElementsByTagName("button");
