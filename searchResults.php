@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Home</title>
+	<title>Results</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="jquery-3.3.1.min.js"></script>
 </head>
@@ -22,7 +22,7 @@
 				</tr>
 			</table>
 			<ul id="menuList">
-				<a href="splash.html">
+				<a href="home.html">
 					<li class="menuItems">
 						<table>
 							<tr>
