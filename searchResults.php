@@ -54,7 +54,7 @@
 				</tr>
 			</table>
 			<ul id="menuList">
-				<a href="home.html">
+				<a href="index.html">
 					<li class="menuItems">
 						<table>
 							<tr>

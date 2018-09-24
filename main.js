@@ -30,17 +30,17 @@ function id(id) {
 }
 
 if (id("contentPanel") != null) {
-id("contentPanel").style.marginTop = id("headerPanel").clientHeight + 30 + "px";
+    id("contentPanel").style.marginTop = id("headerPanel").clientHeight + 30 + "px";
 }
 id("pageTitle").innerHTML = document.getElementsByTagName("title")[0].innerHTML;
 
 var buttons = document.getElementsByTagName("button");
 for (var a = 0; a < buttons.length; a++) {
-    buttons[a].onmouseenter = function() {
+    buttons[a].onmouseenter = function () {
         this.classList.remove("unfilling");
         this.classList.add("filling");
     }
-    buttons[a].onmouseleave = function() {
+    buttons[a].onmouseleave = function () {
         this.classList.remove("filling");
         this.classList.add("unfilling");
     }
@@ -48,28 +48,28 @@ for (var a = 0; a < buttons.length; a++) {
 
 var menuItems = document.getElementsByClassName("menuItems");
 for (var a = 0; a < menuItems.length; a++) {
-    menuItems[a].onmouseenter = function() {
+    menuItems[a].onmouseenter = function () {
         this.classList.remove("unfilling");
         this.classList.add("filling");
     }
-    menuItems[a].onmouseleave = function() {
+    menuItems[a].onmouseleave = function () {
         this.classList.remove("filling");
         this.classList.add("unfilling");
     }
 }
 
-id("openMenuButton").onclick = function() {
+id("openMenuButton").onclick = function () {
     id("menuPanel").classList.remove("shrinking");
     id("menuPanel").classList.add("expanding");
     id("menuPanelContents").style.display = "block";
-    id("shade").style.display="block";
+    id("shade").style.display = "block";
 }
 
 function hideMenu() {
     id("menuPanel").classList.remove("expanding");
     id("menuPanel").classList.add("shrinking");
     id("menuPanelContents").style.display = "none";
-    id("shade").style.display="none";
+    id("shade").style.display = "none";
 }
 
 id("closeMenuButton").onclick = hideMenu;
