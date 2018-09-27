@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div id="headerPanel">
+	<div id="headerPanel">
 		<div id="navBar">
 			<table>
 				<tr>
@@ -22,23 +22,25 @@
 			</table>
 		</div>
 		<div id="headerContent">
-				<h1 id="headerTitle">Kevin Bacon Number Searcher</h1>
-				<form id="form" method="get">
-					<table id="searchBar">
-						<tr>
-							<td style="width: 100%">
-								<input name="actor" id="searchBox" placeholder="Type the name of an actor or actress" autocomplete="off" />
-							</td>
-							<td>
-								<button id="searchButton"></button>
-							</td>
-						</tr>
-					</table>
-				</form>
+			<h1 id="headerTitle">Kevin Bacon Number Searcher</h1>
+			<form id="form" method="get">
+				<table id="searchBar">
+					<tr>
+						<td style="width: 100%">
+							<input name="actor" id="searchBox" placeholder="Type the name of an actor or actress" autocomplete="off" />
+						</td>
+						<td>
+							<button id="searchButton"></button>
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</div>
+	<div id="contentWrapper">
 	<div id="contentPanel">
 		<h2><?php $actor = htmlspecialchars($_GET["actor"]); echo  $actor; ?></h2>
+	</div>
 	</div>
 	<div id="shade"></div>
 	<div id="menuPanel">
@@ -105,7 +107,7 @@
 			</ul>
 		</div>
 	</div>
-	<script src="main.js"></script>
+	<script src="style.js"></script>
 	<script src="searchBar.js"></script>
 </body>
 

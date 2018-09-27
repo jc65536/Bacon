@@ -20,8 +20,6 @@ a {
 body, html {
     padding: 0;
     margin: 0;
-    height: 100%;
-    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -112,22 +110,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #splashPanel {
+    position: absolute;
     height: 100%;
     width: 100%;
     background: #2979FF;
-    overflow: hidden;
-}
-
-#splashGrid {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 #splashContent {
-    box-sizing: border-box;
-    height: 100%;
+    position: relative;
+    top: 20%;
     text-align: center;
 }
 
@@ -185,7 +176,7 @@ input, button:focus {
 #searchBox {
     font-size: 16px;
     height: 20px;
-    padding: 10px;
+    padding: 20px 10px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -205,11 +196,11 @@ button {
 }
 
 .filling {
-    animation: fill 0.1s linear forwards;
+    animation: fill 0.07s linear forwards;
 }
 
 .unfilling {
-    animation: unfill 0.1s linear forwards;
+    animation: unfill 0.07s linear forwards;
 }
 
 @keyframes fill {
