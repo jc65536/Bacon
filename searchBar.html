@@ -1,0 +1,75 @@
+<style>
+    #searchBarGrid {
+    background: white;
+    border-radius: 50px;
+    padding: 2px;
+    width: 35%;
+    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
+    margin: auto;
+}
+#searchInput {
+    font-size: 16px;
+    height: 20px;
+    padding: 20px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#searchButton {
+    background-image: url("baseline-search-24px_black.svg");
+    float: right;
+}
+.floating {
+    animation: float 0.1s linear forwards;
+}
+
+.resting {
+    animation: rest 0.1s linear forwards;
+}
+::placeholder {
+    color: grey;
+}
+
+@keyframes float {
+    from {
+        box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
+    }
+    to {
+        box-shadow: 0px 7px 12px rgba(50, 50, 50, 0.3);
+    }
+}
+
+@keyframes rest {
+    from {
+        box-shadow: 0px 7px 12px rgba(50, 50, 50, 0.3);
+    }
+    to {
+        box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
+    }
+}
+</style>
+<form id="form" action="http://localhost/Bacon/searchResults.php" method="get">
+    <table id="searchBarGrid">
+        <tr>
+            <td style="width: 100%">
+                <input name="actor" id="searchInput" autocomplete="off" placeholder="Type the name of an actor or actress" />
+            </td>
+            <td>
+                <button id="searchButton"></button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    id("searchInput").onfocus = function() {
+    id("searchBarGrid").classList.remove("resting");
+    id("searchBarGrid").classList.add("floating");
+    id("searchButton").style.backgroundImage = "url('baseline-search-24px_blue.svg')";
+}
+
+id("searchInput").onblur = function() {
+    id("searchBarGrid").classList.remove("floating");
+    id("searchBarGrid").classList.add("resting");
+    id("searchButton").style.backgroundImage = "url('baseline-search-24px_black.svg')";
+}
+</script>

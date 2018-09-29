@@ -1,0 +1,164 @@
+<style>
+#shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(50, 50, 50, 0.6);
+    display: none;
+}
+#menuPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 5px 0px 10px rgba(50, 50, 50, 0.3);
+}
+#menuPanelContents {
+    display: none;
+}
+#closeMenuButton {
+    background-image: url("baseline-menu-24px_black.svg");
+}
+#menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuItems {
+    padding: 0px 20px;
+    cursor: pointer;
+    overflow-wrap: none;
+}
+
+.iconCells {
+    padding: 10px;
+}
+.expanding {
+    animation: expand 0.2s cubic-bezier(0.3, 1, 0.3, 1) forwards;
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 300px;
+    }
+}
+
+.shrinking {
+    animation: shrink 0.2s cubic-bezier(0.3, 1, 0.3, 1) forwards;
+}
+
+@keyframes shrink {
+    from {
+        width: 300px;
+    }
+    to {
+        width: 0;
+    }
+}
+</style>
+
+<div id="shade"></div>
+<div id="menuPanel">
+    <div id="menuPanelContents">
+        <table>
+            <tr>
+                <td style="padding: 20px">
+                    <button id="closeMenuButton" class="buttons"></button>
+                </td>
+                <td>
+                    <h2>Menu</h2>
+                </td>
+            </tr>
+        </table>
+        <ul id="menuList">
+            <a href="index.php">
+                <li class="menuItems">
+                    <table>
+                        <tr>
+                            <td class="iconCells">
+                                <img class="menuIcon" src="baseline-home-24px.svg" />
+                            </td>
+                            <td>Home</td>
+                        </tr>
+                    </table>
+                </li>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Kevin_Bacon">
+                <li class="menuItems">
+                    <table>
+                        <tr>
+                            <td class="iconCells">
+                                <img class="menuIcon" src="baseline-open_in_new-24px.svg" />
+                            </td>
+                            <td>More on Kevin Bacon</td>
+                        </tr>
+                    </table>
+                </li>
+            </a>
+            <a href="about.php">
+                <li class="menuItems">
+                    <table>
+                        <tr>
+                            <td class="iconCells">
+                                <img class="menuIcon" src="baseline-help-24px.svg" />
+                            </td>
+                            <td>About</td>
+                        </tr>
+                    </table>
+                </li>
+            </a>
+            <a href="https://github.com/jc65536/Bacon">
+                <li class="menuItems">
+                    <table>
+                        <tr>
+                            <td class="iconCells">
+                                <img class="menuIcon" src="baseline-code-24px.svg" />
+                            </td>
+                            <td>Source code</td>
+                        </tr>
+                    </table>
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
+<script>
+var menuItems = document.getElementsByClassName("menuItems");
+for (var a = 0; a < menuItems.length; a++) {
+    menuItems[a].onmouseenter = function () {
+        this.classList.remove("unfilling");
+        this.classList.add("filling");
+    }
+    menuItems[a].onmouseleave = function () {
+        this.classList.remove("filling");
+        this.classList.add("unfilling");
+    }
+}
+
+id("openMenuButton").onclick = function () {
+    id("menuPanel").classList.remove("shrinking");
+    id("menuPanel").classList.add("expanding");
+    id("menuPanelContents").style.display = "block";
+    id("shade").style.display = "block";
+}
+
+function hideMenu() {
+    id("menuPanel").classList.remove("expanding");
+    id("menuPanel").classList.add("shrinking");
+    id("menuPanelContents").style.display = "none";
+    id("shade").style.display = "none";
+}
+
+id("closeMenuButton").onclick = hideMenu;
+id("shade").onclick = hideMenu;
+</script>

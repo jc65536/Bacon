@@ -27,86 +27,14 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
 }
 
-#headerTitle, #pageTitle {
+#headerTitle {
     color: white;
-}
-
-#menuPanel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: white;
-    overflow: hidden;
-    white-space: nowrap;
-    box-shadow: 5px 0px 10px rgba(50, 50, 50, 0.3);
-}
-
-#shade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(50, 50, 50, 0.6);
-    display: none;
-}
-
-#menuList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menuItems {
-    padding: 0px 20px;
-    cursor: pointer;
-    overflow-wrap: none;
-}
-
-.iconCells {
-    padding: 10px;
-}
-
-.expanding {
-    animation: expand 0.2s cubic-bezier(0.3, 1, 0.3, 1) forwards;
-}
-
-@keyframes expand {
-    from {
-        width: 0;
-    }
-    to {
-        width: 300px;
-    }
-}
-
-.shrinking {
-    animation: shrink 0.2s cubic-bezier(0.3, 1, 0.3, 1) forwards;
-}
-
-@keyframes shrink {
-    from {
-        width: 300px;
-    }
-    to {
-        width: 0;
-    }
-}
-
-#navBar {
-    width: 100%;
 }
 
 #headerContent {
     padding-bottom: 30px;
     margin: 0;
     text-align: center;
-}
-
-::placeholder {
-    color: grey;
 }
 
 #splashPanel {
@@ -135,27 +63,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
 }
 
-#openMenuButton {
-    background-image: url("baseline-menu-24px_white.svg");
-}
-
-#closeMenuButton {
-    background-image: url("baseline-menu-24px_black.svg");
-}
-
-#menuPanelContents {
-    display: none;
-}
-
-#searchBar {
-    background: white;
-    border-radius: 50px;
-    padding: 2px;
-    width: 35%;
-    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
-    margin: auto;
-}
-
 input, button {
     background: none;
     border: none;
@@ -163,6 +70,10 @@ input, button {
 
 input, button:focus {
     outline: none;
+}
+
+#contentWrapper {
+    
 }
 
 #contentPanel {
@@ -173,14 +84,6 @@ input, button:focus {
     box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
 }
 
-#searchBox {
-    font-size: 16px;
-    height: 20px;
-    padding: 20px 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
 button {
     cursor: pointer;
     height: 40px;
@@ -188,11 +91,6 @@ button {
     border-radius: 20px;
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-#searchButton {
-    background-image: url("baseline-search-24px_black.svg");
-    float: right;
 }
 
 .filling {
@@ -218,31 +116,5 @@ button {
     }
     to {
         background-color: none;
-    }
-}
-
-.floating {
-    animation: float 0.1s linear forwards;
-}
-
-.resting {
-    animation: rest 0.1s linear forwards;
-}
-
-@keyframes float {
-    from {
-        box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
-    }
-    to {
-        box-shadow: 0px 7px 12px rgba(50, 50, 50, 0.3);
-    }
-}
-
-@keyframes rest {
-    from {
-        box-shadow: 0px 7px 12px rgba(50, 50, 50, 0.3);
-    }
-    to {
-        box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.3);
     }
 }
