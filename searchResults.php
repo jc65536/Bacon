@@ -18,7 +18,12 @@
 	</div>
 	<div id="contentWrapper">
 	<div id="contentPanel">
-		<h2><?php $actor = htmlspecialchars($_GET["actor"]); echo  $actor; ?></h2>
+		<h2>
+			<?php
+				$actor = ucwords(htmlspecialchars($_GET["actor"]));
+				echo  $actor;
+			?>
+		</h2>
 	</div>
 	</div>
 	<?php readfile("menu.html") ?>

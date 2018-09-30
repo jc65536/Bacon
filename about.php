@@ -66,6 +66,7 @@
                 sociis natoque penatibus et. Est ullamcorper eget nulla facilisi etiam dignissim. Amet dictum sit amet
                 justo donec enim diam vulputate.
             </p>
+            <p>Information courtesy of IMDb (<a href="http://www.imdb.com">http://www.imdb.com</a>). Used with permission.</p>
         </div>
     </div>
     <?php readfile("menu.html") ?>
